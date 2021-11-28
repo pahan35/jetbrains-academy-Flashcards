@@ -24,17 +24,39 @@ body {
 }
 
 .card {
-  box-sizing: border-box;
-  background-color: #FDEFE3;
+  margin: 10px;
   width: 250px;
   height: 250px;
-  margin: 10px;
+}
+
+.rotatable-container {
+  transform-style: preserve-3d;
+  transition: transform .35s .15s;
+}
+
+.rotatable-container:hover {
+  transform: rotateY(180deg);
+}
+
+.rotatable {
+  position: absolute;
+  backface-visibility: hidden;
+  box-sizing: border-box;
   padding: 30px;
+  width: 250px;
+  height: 250px;
   text-align: center;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .country {
-  font-size: 2em;
-  font-weight: 700;
+  background-color: #FDEFE3;
   color: #FF6A00;
+}
+
+.capital {
+  background-color: #FF6A00;
+  transform: rotateY(180deg);
+  color: #FDEFE3;
 }
